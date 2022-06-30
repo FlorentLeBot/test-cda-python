@@ -1,17 +1,16 @@
-# Entrée utilisateur
-
 # affichage dans le terminal
 
-val = input("Entrer un nombre entre 0 et 99 et appuyer sur entrée: ")
+# gestion de l'erreur ValueError
 
-# affiche le message d'erreur si la val n'est pas un entier
-
-try:
-    val = int(val)
-
-except ValueError:
-    print("Oups une erreur, vous devez choisir une valeur entre 0 et 99")
-    
+while True:
+    try:
+        # Entrée utilisateur
+         val = int(input("Entrer un nombre entre 0 et 99 et appuyer sur entrée: "))
+         break
+    except ValueError:
+        print("Vous devez choisir une valeur entre 0 et 99.")
+        continue
+  
 # mes variables
 
 plural = "s "
